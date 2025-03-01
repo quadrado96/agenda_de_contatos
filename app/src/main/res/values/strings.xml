@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">agendaContatos</string>
+    <string name="app_name">Agenda de contatos</string>
+    <string name="dados_do_contato">Dados do contato</string>
 </resources>

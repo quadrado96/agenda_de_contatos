@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.setTitle(R.string.app_name)
+
         val listaContatos = findViewById<RecyclerView>(R.id.rv_Contatos)
 
         val salvarContato = Intent(this, salvarNovoContato::class.java)

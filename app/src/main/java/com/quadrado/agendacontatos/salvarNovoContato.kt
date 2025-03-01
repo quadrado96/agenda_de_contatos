@@ -18,8 +18,12 @@ class salvarNovoContato : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.setTitle(R.string.dados_do_contato)
+
+
         val salvarContato = findViewById<FloatingActionButton>(R.id.fab_salvarContato).setOnClickListener() {
-            finish()
+
+            Database.getInstance(this)!!.ContatoDAO().salvar()
         }
 
 
