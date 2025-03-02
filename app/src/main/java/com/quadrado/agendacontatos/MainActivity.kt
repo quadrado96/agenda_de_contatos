@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -46,11 +47,29 @@ class MainActivity : AppCompatActivity() {
         val listaContatos = findViewById<RecyclerView>(R.id.rv_Contatos)
         listaContatos.layoutManager = LinearLayoutManager(this)
 
-        adapter = ContatoAdapter(mutableListOf())
+        val contatos = Database.getInstance(this)!!.ContatoDAO().listarContatos()
+
+        adapter = ContatoAdapter(contatos.toMutableList()) { contatoSelecionado ->
+            removerContato(contatoSelecionado)
+        }
         listaContatos.adapter = adapter
 
         if (adapter.itemCount == 0) {
             Toast.makeText(this, "Essa lista está vazia.", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun removerContato(contato: Contato) {
+        AlertDialog.Builder(this).apply {
+            setTitle("Remover Contato")
+            setMessage("Tem certeza?")
+            setPositiveButton("Remover") { _, _ ->
+                Database.getInstance(this@MainActivity)!!.ContatoDAO().apagar(contato)
+                listarContatos()
+            }
+            setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.dismiss()
+            }
+        }.create().show()
     }
 }

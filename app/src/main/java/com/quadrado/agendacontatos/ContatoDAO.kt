@@ -21,4 +21,7 @@ interface ContatoDAO {
     @Query("SELECT * FROM Contato ORDER BY nome")
     fun listarContatos(): List<Contato>
 
+    @Query("SELECT * FROM Contato WHERE id = :id")
+    fun listarPorId(id: Int): Contato
+
 }

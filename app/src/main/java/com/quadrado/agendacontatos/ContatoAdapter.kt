@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ContatoAdapter(private val listaContatos: MutableList<Contato>) :
+class ContatoAdapter(private val listaContatos: MutableList<Contato>,
+                     private val onLongClick: (Contato) -> Unit) :
     RecyclerView.Adapter<ContatoAdapter.ContatoViewHolder>() {
 
     class ContatoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -31,13 +32,19 @@ class ContatoAdapter(private val listaContatos: MutableList<Contato>) :
         holder.tvEmail.text = contato.email
         holder.tvCep.text = contato.cep
         holder.tvEndereco.text = stringEndereco
+
+        holder.itemView.setOnLongClickListener {
+            onLongClick(contato)
+            true
+        }
+
     }
 
     override fun getItemCount(): Int {
         return listaContatos.size
     }
 
-    fun atualizarLista(novaLista: List<Contato>) {
+    fun listarContatos(novaLista: List<Contato>) {
         listaContatos.clear()
         listaContatos.addAll(novaLista)
         notifyDataSetChanged()
