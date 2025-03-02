@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AgendaContatos"
         tools:targetApi="31">
         <activity
-            android:name=".salvarNovoContato"
+            android:name=".SalvarNovoContato"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

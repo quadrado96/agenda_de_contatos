@@ -12,10 +12,12 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
+        android:tint="#DE3F51B5"
+        android:tintMode="screen"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:srcCompat="@drawable/batman" />
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -34,7 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+        android:visibility="invisible"
+        app:layout_constraintGuide_percent="0.038647342"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -42,8 +46,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="invisible"
-        app:layout_constraintGuide_begin="395dp"
-        tools:visibility="invisible" />
+        app:layout_constraintGuide_percent="0.96135265"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
