@@ -80,8 +80,8 @@
         android:layout_width="278dp"
         android:layout_height="51dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/til_Email"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_Email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_Rua"
@@ -95,11 +95,14 @@
         android:id="@+id/til_Numero"
         android:layout_width="117dp"
         android:layout_height="51dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_Estado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toEndOf="@+id/til_Rua"
-        tools:layout_editor_absoluteY="227dp">
+        app:layout_constraintTop_toBottomOf="@+id/til_Email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_Numero"
@@ -129,10 +132,14 @@
         android:id="@+id/til_Estado"
         android:layout_width="117dp"
         android:layout_height="51dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_Cep"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_Numero">
+        app:layout_constraintStart_toEndOf="@+id/til_Cidade"
+        app:layout_constraintTop_toBottomOf="@+id/til_Rua">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_Estado"

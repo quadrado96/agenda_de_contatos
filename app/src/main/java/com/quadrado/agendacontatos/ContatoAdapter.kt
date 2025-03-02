@@ -17,7 +17,7 @@ class ContatoAdapter(private val listaContatos: MutableList<Contato>,
         val tvEmail = view.findViewById<TextView>(R.id.tv_Email)
         val tvEndereco = view.findViewById<TextView>(R.id.tv_Endereco)
         val tvCep = view.findViewById<TextView>(R.id.tv_Cep)
-        val imgContato = view.findViewById<ImageView>(R.id.imageView)
+        val imgContato = view.findViewById<ImageView>(R.id.img_Contatoo)
 
     }
 

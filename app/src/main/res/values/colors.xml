@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Tema Escuro -->
+    <color name="colorPrimary">#121212</color>
+    <color name="colorPrimaryVariant">#1E1E1E</color>
+    <color name="colorSecondary">#0D47A1</color>
+
+    <!-- Tema Claro -->
+    <color name="colorPrimaryLight">#F5F5F5</color>
+    <color name="colorPrimaryVariantLight">#E0E0E0</color>
+    <color name="colorSecondaryLight">#1976D2</color>
 </resources>

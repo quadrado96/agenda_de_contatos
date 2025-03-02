@@ -5,15 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <Space
+        android:layout_width="417dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="92dp"
+        tools:visibility="visible" />
+
     <ImageView
-        android:id="@+id/img_Contato"
+        android:id="@+id/img_Contatoo"
         android:layout_width="64dp"
         android:layout_height="59dp"
-        android:tint="#DE3F51B5"
+        android:layout_marginStart="25dp"
         android:tintMode="screen"
-        app:srcCompat="@android:drawable/ic_menu_myplaces"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="17dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
     <TextView
         android:id="@+id/tv_Nome"
@@ -21,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:text="Nome"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/img_Contato"
-        app:layout_constraintTop_toTopOf="@+id/img_Contato" />
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintStart_toStartOf="@+id/img_Contatoo"
+        app:layout_constraintTop_toTopOf="@+id/img_Contatoo" />
 
     <TextView
         android:id="@+id/tv_Email"
@@ -32,11 +42,11 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="6dp"
         android:text="Email"
-        android:textColor="@color/material_dynamic_neutral30"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_Nome"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/img_Contato"
+        app:layout_constraintStart_toEndOf="@+id/img_Contatoo"
         app:layout_constraintTop_toBottomOf="@+id/tv_Nome" />
 
     <TextView
@@ -45,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:text="Endereço"
-        android:textColorHighlight="@color/material_dynamic_neutral30"
+        android:textColor="@android:color/holo_red_light"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/tv_Email"
         app:layout_constraintTop_toBottomOf="@+id/tv_Email" />
@@ -56,7 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:text="Telefone"
-        android:textColor="@color/material_dynamic_neutral10"
+        android:textColor="?attr/colorSecondaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_Nome"
         tools:layout_editor_absoluteY="17dp" />
 
@@ -64,19 +75,23 @@
         android:id="@+id/tv_Cep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginTop="6dp"
         android:text="CEP"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toEndOf="@+id/tv_Email"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Telefone" />
 
     <Space
         android:layout_width="417dp"
         android:layout_height="0dp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="92dp"
+        tools:layout_editor_absoluteY="1dp"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
