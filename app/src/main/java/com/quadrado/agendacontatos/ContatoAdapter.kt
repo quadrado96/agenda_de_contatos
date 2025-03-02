@@ -3,6 +3,7 @@ package com.quadrado.agendacontatos
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,6 +17,8 @@ class ContatoAdapter(private val listaContatos: MutableList<Contato>,
         val tvEmail = view.findViewById<TextView>(R.id.tv_Email)
         val tvEndereco = view.findViewById<TextView>(R.id.tv_Endereco)
         val tvCep = view.findViewById<TextView>(R.id.tv_Cep)
+        val imgContato = view.findViewById<ImageView>(R.id.imageView)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContatoViewHolder {
@@ -32,6 +35,11 @@ class ContatoAdapter(private val listaContatos: MutableList<Contato>,
         holder.tvEmail.text = contato.email
         holder.tvCep.text = contato.cep
         holder.tvEndereco.text = stringEndereco
+
+        if (contato.nome.equals("Brunno") ||
+            contato.nome.equals("Brunno Quadrado")) {
+            holder.imgContato.setImageResource(R.drawable.batman)
+        }
 
         holder.itemView.setOnLongClickListener {
             onLongClick(contato)

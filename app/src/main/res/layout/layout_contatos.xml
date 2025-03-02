@@ -6,58 +6,14 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_Contato"
         android:layout_width="64dp"
         android:layout_height="59dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
         android:tint="#DE3F51B5"
         android:tintMode="screen"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:srcCompat="@android:drawable/ic_menu_myplaces" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="411dp"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.024623804"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="invisible"
-        app:layout_constraintGuide_percent="0.038647342"
-        tools:visibility="visible" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="invisible"
-        app:layout_constraintGuide_percent="0.96135265"
-        tools:visibility="visible" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:rotationX="0"
-        android:visibility="visible"
-        app:layout_constraintGuide_percent="0.17"
-        tools:visibility="visible" />
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="17dp" />
 
     <TextView
         android:id="@+id/tv_Nome"
@@ -66,8 +22,8 @@
         android:layout_marginStart="81dp"
         android:text="Nome"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/img_Contato"
+        app:layout_constraintTop_toTopOf="@+id/img_Contato" />
 
     <TextView
         android:id="@+id/tv_Email"
@@ -80,7 +36,7 @@
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_Nome"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/img_Contato"
         app:layout_constraintTop_toBottomOf="@+id/tv_Nome" />
 
     <TextView
@@ -98,21 +54,29 @@
         android:id="@+id/tv_Telefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_marginStart="44dp"
         android:text="Telefone"
         android:textColor="@color/material_dynamic_neutral10"
         app:layout_constraintStart_toEndOf="@+id/tv_Nome"
-        tools:layout_editor_absoluteY="30dp" />
+        tools:layout_editor_absoluteY="17dp" />
 
     <TextView
         android:id="@+id/tv_Cep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginStart="56dp"
         android:text="CEP"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintStart_toEndOf="@+id/tv_Email" />
+        app:layout_constraintStart_toEndOf="@+id/tv_Email"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <Space
+        android:layout_width="417dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="92dp"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
